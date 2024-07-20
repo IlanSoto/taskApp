@@ -1,27 +1,46 @@
 # TaskApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.7.
+Esta aplicación Angular muestra cómo manejar datos asíncronos usando observables y operadores. El componente principal muestra una lista de tareas, separadas en tareas completadas y no completadas. Cada tarea puede expandirse para ver más detalles.
 
-## Development server
+## Estructura del Proyecto
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Modelo de Datos**: `src/app/task.model.ts`
+- **Servicio de Tareas**: `src/app/task.service.ts`
+- **Componente de Lista de Tareas**: `src/app/task-list/task-list.component.ts`
+- **Plantilla HTML del Componente**: `src/app/task-list/task-list.component.html`
+- **Estilos CSS del Componente**: `src/app/task-list/task-list.component.css`
 
-## Code scaffolding
+## Instalación
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. **Clona el repositorio**:
 
-## Build
+    ```bash
+    git clone <URL_DEL_REPOSITORIO>
+    cd taskApp
+    ```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+2. **Instala las dependencias**:
 
-## Running unit tests
+    ```bash
+    npm install
+    ```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+3. **Inicia la aplicación**:
 
-## Running end-to-end tests
+    ```bash
+    ng serve
+    ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+   Abre tu navegador y navega a `http://localhost:4200`.
 
-## Further help
+## Modelo de Datos
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+El modelo de datos `Task` define la estructura de una tarea:
+
+```typescript
+// src/app/task.model.ts
+export interface Task {
+  id: number;
+  name: string;
+  completed: boolean;
+}
